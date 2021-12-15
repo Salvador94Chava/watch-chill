@@ -1,4 +1,4 @@
-let modalEl = $('nav');
+let modalEl = $('div.modal');
 
 // modalEl.addClass("navbar");
 // modalEl.attr("role","navigation");

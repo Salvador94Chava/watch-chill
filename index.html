@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
 
 
     <title>Watch&Chill App</title>
@@ -13,7 +15,7 @@
 
 </head>
 
-<body class="$black: hsl (100%)">
+<body>
     <nav></nav>
     <div>
         <h1 class="title has-text-centered">Welcome to Watch and Chill!
@@ -31,9 +33,20 @@
             </div>
         </div>
         <!-- instead of a picture i belive we should put the Carousel to give a better image to the page. -->
-        <picture>
-            <img src="https://media.thetab.com/blogs.dir/117/files/2016/03/hqdefault.jpg" alt="watch and chill image">
-        </picture>
+        <div class="column is-one-quarter">
+            <div class="card equal-height">
+                <div class="card-image has-text-centered">
+                    <picture>
+                        <img class="is-centered"
+                            src="https://media.thetab.com/blogs.dir/117/files/2016/03/hqdefault.jpg"
+                            alt="watch and chill image">
+                    </picture>
+
+                </div>
+
+            </div>
+
+        </div>
         <div class="has-text-centered">
             <a href="./genres.html" class="button is-success is-large">
                 Get Started

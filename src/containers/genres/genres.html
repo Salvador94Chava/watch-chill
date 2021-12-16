@@ -18,7 +18,9 @@
   <nav></nav>
 
   <main>
-    
+
+    <form>
+
     <div id = "genres" class = "columns">
 
       <div id="genreYes" class = "column">
@@ -26,32 +28,32 @@
         <div class = "box">
           <table class = "table">
             <tr>
-              <th><label class="checkbox"><input type="checkbox"> Comedy <i class="fas fa-laugh-squint"></i></label></th>
-              <th><label class="checkbox"><input type="checkbox"> Crime <i class="fas fa-user-ninja"></i></label></th>
-              <th><label class="checkbox"><input type="checkbox"> Thriller <i class="fas fa-crow"></i></label></th>
-              <th><label class="checkbox"><input type="checkbox"> Adventure <i class="fas fa-map-signs"></i></label></th>
-              <th><label class="checkbox"><input type="checkbox"> Sport <i class="fas fa-football-ball"></i></label></th>
+              <th><label class="checkbox"><input type="checkbox" data-index="Comedy" class="yes"> Comedy <i class="fas fa-laugh-squint"></i></label></th>
+              <th><label class="checkbox"><input type="checkbox" data-index="Crime" class="yes"> Crime <i class="fas fa-user-ninja"></i></label></th>
+              <th><label class="checkbox"><input type="checkbox" data-index="Thriller" class="yes"> Thriller <i class="fas fa-crow"></i></label></th>
+              <th><label class="checkbox"><input type="checkbox" data-index="Adventure" class="yes"> Adventure <i class="fas fa-map-signs"></i></label></th>
+              <th><label class="checkbox"><input type="checkbox" data-index="Western" class="yes"> Western <i class="fab fa-sticker-mule"></i></label></th>
             </tr>       
             <tr>
-                <th><label class="checkbox"><input type="checkbox"> Family <i class="fas fa-home"></i></label></th>
-                <th><label class="checkbox"><input type="checkbox"> Fantasy <i class="fas fa-dragon"></i></label></th>
-                <th><label class="checkbox"><input type="checkbox"> Action <i class="fas fa-bomb"></i></label></th>
-                <th><label class="checkbox"><input type="checkbox"> Detective <i class="fas fa-user-secret"></i></label></th>
-                <th><label class="checkbox"><input type="checkbox"> Horror <i class="fas fa-ghost"></i></label></th>
+                <th><label class="checkbox"><input type="checkbox" data-index="Family" class="yes"> Family <i class="fas fa-home"></i></label></th>
+                <th><label class="checkbox"><input type="checkbox" data-index="Fantasy" class="yes"> Fantasy <i class="fas fa-dragon"></i></label></th>
+                <th><label class="checkbox"><input type="checkbox" data-index="Action" class="yes"> Action <i class="fas fa-bomb"></i></label></th>
+                <th><label class="checkbox"><input type="checkbox" data-index="Documentary" class="yes"> Doc <i class="fas fa-video"></i></label></th>
+                <th><label class="checkbox"><input type="checkbox" data-index="Horror" class="yes"> Horror <i class="fas fa-ghost"></i></label></th>
               </tr>         
               <tr>
-                <th><label class="checkbox"><input type="checkbox"> Romance <i class="fas fa-heart"></i></label></th>
-                <th><label class="checkbox"><input type="checkbox"> Biography <i class="fas fa-user-tie"></i></label></th>
-                <th><label class="checkbox"><input type="checkbox"> History <i class="fab fa-fort-awesome"></i></label></th>
-                <th><label class="checkbox"><input type="checkbox"> Mystery <i class="fas fa-search"></i></label></th>
-                <th><label class="checkbox"><input type="checkbox"> Musical <i class="fas fa-music"></i></label></th>
+                <th><label class="checkbox"><input type="checkbox" data-index="Romance" class="yes"> Romance <i class="fas fa-heart"></i></label></th>
+                <th><label class="checkbox"><input type="checkbox" data-index="TV Movie" class="yes"> TV Movie <i class="fas fa-tv"></i></label></th>
+                <th><label class="checkbox"><input type="checkbox" data-index="History" class="yes"> History <i class="fab fa-fort-awesome"></i></label></th>
+                <th><label class="checkbox"><input type="checkbox" data-index="Mystery" class="yes"> Mystery <i class="fas fa-user-secret"></i></label></th>
+                <th><label class="checkbox"><input type="checkbox" data-index="Music" class="yes"> Musical <i class="fas fa-music"></i></label></th>
               </tr>         
               <tr>
-                <th><label class="checkbox"><input type="checkbox"> Drama <i class="fas fa-theater-masks"></i></label></th>
-                <th><label class="checkbox"><input type="checkbox"> Sci-Fi <i class="fas fa-robot"></i></label></th>
-                <th><label class="checkbox"><input type="checkbox"> War <i class="fas fa-fighter-jet"></i></label></th>
-                <th><label class="checkbox"><input type="checkbox"> Animation <i class="fab fa-optin-monster"></i></label></th>
-                <th><label class="checkbox"><input type="checkbox"> Western <i class="fab fa-sticker-mule"></i></label></th>
+                <th><label class="checkbox"><input type="checkbox" data-index="Drama" class="yes"> Drama <i class="fas fa-theater-masks"></i></label></th>
+                <th><label class="checkbox"><input type="checkbox" data-index="Science Fiction" class="yes"> Sci-Fi <i class="fas fa-robot"></i></label></th>
+                <th><label class="checkbox"><input type="checkbox" data-index="War" class="yes"> War <i class="fas fa-fighter-jet"></i></label></th>
+                <th><label class="checkbox"><input type="checkbox" data-index="Animation" class="yes"> Animation <i class="fab fa-optin-monster"></i></label></th>
+
               </tr>         
           </table>
         </div>
@@ -61,45 +63,47 @@
           <h2 class="title is-2">No way</h2>
           <div class = "box">
             <table class = "table">
+              <tr>
+                <th><label class="checkbox"><input type="checkbox" data-index="Comedy" class="no"> Comedy <i class="fas fa-laugh-squint"></i></label></th>
+                <th><label class="checkbox"><input type="checkbox" data-index="Crime" class="no"> Crime <i class="fas fa-user-ninja"></i></label></th>
+                <th><label class="checkbox"><input type="checkbox" data-index="Thriller" class="no"> Thriller <i class="fas fa-crow"></i></label></th>
+                <th><label class="checkbox"><input type="checkbox" data-index="Adventure" class="no"> Adventure <i class="fas fa-map-signs"></i></label></th>
+                <th><label class="checkbox"><input type="checkbox" data-index="Western" class="no"> Western <i class="fab fa-sticker-mule"></i></label></th>
+              </tr>       
+              <tr>
+                  <th><label class="checkbox"><input type="checkbox" data-index="Family" class="no"> Family <i class="fas fa-home"></i></label></th>
+                  <th><label class="checkbox"><input type="checkbox" data-index="Fantasy" class="no"> Fantasy <i class="fas fa-dragon"></i></label></th>
+                  <th><label class="checkbox"><input type="checkbox" data-index="Action" class="no"> Action <i class="fas fa-bomb"></i></label></th>
+                  <th><label class="checkbox"><input type="checkbox" data-index="Documentary" class="no"> Doc <i class="fas fa-video"></i></label></th>
+                  <th><label class="checkbox"><input type="checkbox" data-index="Horror" class="no"> Horror <i class="fas fa-ghost"></i></label></th>
+                </tr>         
                 <tr>
-                  <th><label class="checkbox"><input type="checkbox"> Comedy <i class="fas fa-laugh-squint"></i></label></th>
-                  <th><label class="checkbox"><input type="checkbox"> Crime <i class="fas fa-user-ninja"></i></label></th>
-                  <th><label class="checkbox"><input type="checkbox"> Thriller <i class="fas fa-crow"></i></label></th>
-                  <th><label class="checkbox"><input type="checkbox"> Adventure <i class="fas fa-map-signs"></i></label></th>
-                  <th><label class="checkbox"><input type="checkbox"> Sport <i class="fas fa-football-ball"></i></label></th>
+                  <th><label class="checkbox"><input type="checkbox" data-index="Romance" class="no"> Romance <i class="fas fa-heart"></i></label></th>
+                  <th><label class="checkbox"><input type="checkbox" data-index="TV Movie" class="no"> TV Movie <i class="fas fa-tv"></i></label></th>
+                  <th><label class="checkbox"><input type="checkbox" data-index="History" class="no"> History <i class="fab fa-fort-awesome"></i></label></th>
+                  <th><label class="checkbox"><input type="checkbox" data-index="Mystery" class="no"> Mystery <i class="fas fa-user-secret"></i></label></th>
+                  <th><label class="checkbox"><input type="checkbox" data-index="Music" class="no"> Musical <i class="fas fa-music"></i></label></th>
+                </tr>         
+                <tr>
+                  <th><label class="checkbox"><input type="checkbox" data-index="Drama" class="no"> Drama <i class="fas fa-theater-masks"></i></label></th>
+                  <th><label class="checkbox"><input type="checkbox" data-index="Science Fiction" class="no"> Sci-Fi <i class="fas fa-robot"></i></label></th>
+                  <th><label class="checkbox"><input type="checkbox" data-index="War" class="no"> War <i class="fas fa-fighter-jet"></i></label></th>
+                  <th><label class="checkbox"><input type="checkbox" data-index="Animation" class="no"> Animation <i class="fab fa-optin-monster"></i></label></th>
+
                 </tr>       
-                <tr>
-                    <th><label class="checkbox"><input type="checkbox"> Family <i class="fas fa-home"></i></label></th>
-                    <th><label class="checkbox"><input type="checkbox"> Fantasy <i class="fas fa-dragon"></i></label></th>
-                    <th><label class="checkbox"><input type="checkbox"> Action <i class="fas fa-bomb"></i></label></th>
-                    <th><label class="checkbox"><input type="checkbox"> Detective <i class="fas fa-user-secret"></i></label></th>
-                    <th><label class="checkbox"><input type="checkbox"> Horror <i class="fas fa-ghost"></i></label></th>
-                  </tr>         
-                  <tr>
-                    <th><label class="checkbox"><input type="checkbox"> Romance <i class="fas fa-heart"></i></label></th>
-                    <th><label class="checkbox"><input type="checkbox"> Biography <i class="fas fa-user-tie"></i></label></th>
-                    <th><label class="checkbox"><input type="checkbox"> History <i class="fab fa-fort-awesome"></i></label></th>
-                    <th><label class="checkbox"><input type="checkbox"> Mystery <i class="fas fa-search"></i></label></th>
-                    <th><label class="checkbox"><input type="checkbox"> Musical <i class="fas fa-music"></i></label></th>
-                  </tr>         
-                  <tr>
-                    <th><label class="checkbox"><input type="checkbox"> Drama <i class="fas fa-theater-masks"></i></label></th>
-                    <th><label class="checkbox"><input type="checkbox"> Sci-Fi <i class="fas fa-robot"></i></label></th>
-                    <th><label class="checkbox"><input type="checkbox"> War <i class="fas fa-fighter-jet"></i></label></th>
-                    <th><label class="checkbox"><input type="checkbox"> Animation <i class="fab fa-optin-monster"></i></label></th>
-                    <th><label class="checkbox"><input type="checkbox"> Western <i class="fab fa-sticker-mule"></i></label></th>
-                  </tr>         
               </table>
         </div>
       </div>
 
     </div>
 
-      <button class="button is-large">NEXT</button>
+      <input type="submit" name="submit" value="Next" class="button is-large">
+  </form>
 
 </main>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="../navigation-bar/js/nav.js"></script>
 <script src="js/genres.js"></script>
+
 </body>
 </html>

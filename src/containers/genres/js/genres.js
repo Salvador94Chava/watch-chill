@@ -2,15 +2,8 @@ var nextBtn = document.querySelector("input.button");
 
 nextBtn.addEventListener("click", storeGenreOptions);
 
-input = document.querySelectorAll("input");
-
 inputYes = document.querySelectorAll("input.yes");
 inputNo = document.querySelectorAll("input.no");
-
-console.log(input);
-console.log(inputYes);
-console.log(inputNo);
-
 
 var label = document.querySelectorAll("label");
 
@@ -22,13 +15,6 @@ label[i].addEventListener("click", uncheck);
 
  function uncheck(event) {
     
-    console.log(event.target.className);
-    console.log(event.target.dataset.index);
-    console.log(inputNo[0].checked);
-    console.log(event.target.dataset.index === inputNo[0].dataset.index);
-
-
-
 
     for (var i = 0; i < inputYes.length; i++) {
 
@@ -44,13 +30,7 @@ label[i].addEventListener("click", uncheck);
 
     }
 
-    
-
-    
-
 }
-
-
 
 function storeGenreOptions(event) {
 

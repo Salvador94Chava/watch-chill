@@ -1,12 +1,15 @@
 let navBarEl = $('nav');
+let logoPath = location.pathname.includes('containers') ? '../../../assets/images/watch_chill_logo.png'
+  : './assets/images/watch_chill_logo.png';
 
-navBarEl.addClass("navbar");
-navBarEl.attr("role","navigation");
-navBarEl.attr("aria-label","main navigation");
+
+navBarEl.addClass("navbar level");
+navBarEl.attr("role", "navigation");
+navBarEl.attr("aria-label", "main navigation");
 navBarEl.html(`
-<div class="navbar-brand">
-    <a class="navbar-item" href="">
-      <img src="assets/images/logo4.png" width="70" height="110">
+<div class="level-item">
+    <a href="">
+      <img src="${logoPath}" alt="Watch&Chill logo" style= "height: 150px;">
     </a>
   </div>
 `);

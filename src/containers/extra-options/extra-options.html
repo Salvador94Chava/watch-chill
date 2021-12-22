@@ -10,16 +10,115 @@
         <title>Watch&Chill App</title>
         <link rel="stylesheet"
               href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+        <link rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/@creativebulma/bulma-tooltip@1.2.0/dist/bulma-tooltip.min.css">
+        <link rel="stylesheet"
+              href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+              integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+              crossorigin="anonymous" />
+        <link rel="stylesheet"
+              href="./css/options.css">
     </head>
 
     <body>
-        <nav></nav>
+        <div class="block">
+            <nav></nav>
+        </div>
+
+        <div id="keyword"
+             class="container field is-max-desktop">
+            <div class="field is-horizontal">
+                <div class="field-label is-large">
+                    <label class="label">Keywords:</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control">
+                            <input class="input is-large"
+                                   type="text"
+                                   placeholder="e.g. haunted house">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="language"
+             class="container field is-max-desktop">
+            <div class="field is-horizontal">
+                <div class="field-label is-large">
+                    <label class="label">Original language:</label>
+                </div>
+                <div id="lenguage"
+                     class="dropdown field-body">
+                    <div class="control has-icons-left">
+                        <div id="dropdown-lenguage-menu"
+                             class="select is-large">
+                            <select class="dropdown-content">
+                            </select>
+                        </div>
+                        <span class="icon is-large is-left">
+                            <i class="fas fa-language"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="date"
+                 class="container field is-max-desktop">
+                <div class="field is-horizontal">
+                    <div class="field-label is-large">
+                        <label class="label"><span
+                                  class="has-tooltip-multiline has-tooltip-arrow has-tooltip-info has-tooltip-bottom has-tooltip-text-left"
+                                  data-tooltip="Please give a date range in order to give you better options. ">Date:</span></label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field-label is-medium">
+                            <label class="label">From</label>
+                        </div>
+                        <div id="from-year"
+                             class="dropdown field">
+                            <div class="control has-icons-left">
+                                <div id="dropdown-from-menu"
+                                     class="select is-large">
+                                    <select class="dropdown-content">
+                                    </select>
+                                </div>
+                                <span class="icon is-large is-left">
+                                    <i class="far fa-calendar"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="field-label is-medium">
+                            <label class="label">To</label>
+                        </div>
+                        <div id="to-year"
+                             class="dropdown field">
+                            <div class="control has-icons-left">
+                                <div id="dropdown-to-menu"
+                                     class="select is-large">
+                                    <select class="dropdown-content">
+                                    </select>
+                                </div>
+                                <span class="icon is-large is-left">
+                                    <i class="far fa-calendar"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </body>
+
     <script src="https://code.jquery.com/jquery-3.6.0.js"
             integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
             crossorigin="anonymous"></script>
     <script src="../navigation-bar/js/nav.js"></script>
-    <script src="./src/containers/navigation-bar/js/nav.js"></script>
+    <script src="./js/languages.js"></script>
+    <script src="./js/options.js"></script>
+    
+    <!-- <script src="https://www.jsdelivr.com/package/npm/@creativebulma/bulma-tooltip"></script> -->
 
 </html>

@@ -5,3 +5,8 @@ html {
     height  : 100%;
     overflow: scroll;
 }
+
+.slider-pagination {
+
+  bottom: -30px  
+}

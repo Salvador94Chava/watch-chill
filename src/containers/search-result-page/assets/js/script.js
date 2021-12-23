@@ -29,7 +29,6 @@ function getMoviesFromAPI() {
         .then(function (data) {
 
             genresArray = data.genres;
-            console.log(genresArray);
 
         })
 
@@ -45,15 +44,17 @@ function getMoviesFromAPI() {
         .then(function (data) {
 
             readMoviesArray(data.results);
-            console.log(data);
         })
 
 }
 function readMoviesArray(myArray) {
+    console.log(myArray);
     for (var index = 0; index < myArray.length; index++) {
         var movie = myArray[index];
         addMovie(movie);
     }
+
+
 }
 
 function translateGenres(myGenres) {
@@ -88,7 +89,7 @@ function addMovie(myMovie) {
     var sliderEl = document.getElementById("slider1");
     /*console.log(sliderEl);*/
     var cardEl = document.createElement("div");
-    cardEl.setAttribute("class", "card");
+    cardEl.setAttribute("class", "card " + myMovie.id);
     var card_imageEl = document.createElement("div");
     card_imageEl.setAttribute("class", "card-image");
 
@@ -106,13 +107,13 @@ function addMovie(myMovie) {
     card_contentEl.setAttribute("class", "card-content");
     var item_titleEl = document.createElement("div");
     item_titleEl.setAttribute("class", "item__title");
-    item_titleEl.textContent = adaptText(myMovie.title,41);
+    item_titleEl.textContent = adaptText(myMovie.title, 41);
     var item_descriptionEl = document.createElement("div");
     item_descriptionEl.setAttribute("class", "item__description");
-    item_descriptionEl.textContent = adaptText(myMovie.overview, 82); 
+    item_descriptionEl.textContent = adaptText(myMovie.overview, 82);
     var item_genresEl = document.createElement("div");
     item_genresEl.setAttribute("class", "item__description");
-    item_genresEl.textContent = "Genre: " + translateGenres(myMovie.genre_ids); 
+    item_genresEl.textContent = "Genre: " + translateGenres(myMovie.genre_ids);
 
     card_contentEl.append(item_titleEl);
     card_contentEl.append(item_descriptionEl);
@@ -124,10 +125,30 @@ function addMovie(myMovie) {
 
     sliderEl.append(cardEl);
 
+
 }
 
-/*addMovie()*/
+function createEventManager() {
+
+    $(".card").click(function (event) {
+        event.preventDefault();
+
+        var classString = ($(this)[0].className);
+        if (classString) {
+            var movieID = classString.substring(($(this)[0].className).indexOf(' '), ($(this)[0].className).length);
+            console.log(movieID);
+        }
+    });
+}
+
+
 getMoviesFromAPI();
+$(document).ready(createEventManager);
+
+
+
+
+
 
 
 

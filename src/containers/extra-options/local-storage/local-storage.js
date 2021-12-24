@@ -1,12 +1,15 @@
+const API_KEY = '27612305371d20a404c362f2768ab01667';
+let keywordInput = document.getElementById("input-keyword");
+
+
 function outputKeyword() {
     var keywordInput = document.getElementById("input-keyword");
     var selectInput = document.getElementById("input-select");
 }
 
 function api_request() {
-    var keywordInput = document.getElementById("input-keyword");
-    /* var url = "https://api.themoviedb.org/3/search/movie?api_key=%27612305371d20a404c362f2768ab01667%27&query=%27matrix%27"; */
-    var url = "https://api.themoviedb.org/3/search/keyword?api_key=612305371d20a404c362f2768ab01667&query=" + keywordInput.value;
+    //var keywordInput = document.getElementById("input-keyword");
+    var url = `https://api.themoviedb.org/3/search/keyword?api_key=${API_KEY}&query=${keywordInput.value}`;
     console.log("Sending request: " + url);
 
     var xhr = new XMLHttpRequest();

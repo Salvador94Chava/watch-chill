@@ -4,8 +4,8 @@ let fromYearMenu = document.querySelector('#dropdown-from-menu .dropdown-content
 let toYearMenu = document.querySelector('#dropdown-to-menu .dropdown-content');
 let languagesMenu = document.querySelector('#dropdown-lenguage-menu .dropdown-content');
 let dropdownItem = document.querySelector('.dropdown-item');
-let backButton = document.getElementById('back-btn');
-let searchButton = document.getElementById('search-btn');
+let backButton = document.getElementById('backBtn');
+let searchButton = document.getElementById('searchBtn');
 
 const earliestYear = 1940;
 

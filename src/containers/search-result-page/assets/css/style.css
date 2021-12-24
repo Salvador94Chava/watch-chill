@@ -1,0 +1,12 @@
+html {
+    overflow: hidden;
+}
+.column {
+    height  : 100%;
+    overflow: scroll;
+}
+
+.slider-pagination {
+
+  bottom: -30px  
+}

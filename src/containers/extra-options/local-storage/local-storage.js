@@ -1,37 +1,6 @@
 function outputKeyword() {
     var keywordInput = document.getElementById("input-keyword");
     var selectInput = document.getElementById("input-select");
-
-    // console.log(selectInput.options[selectInput.selectedIndex].value);
-    // console.log(keywordInput.value);
-
-    // window.localStorage.setItem(selectInput.options[selectInput.selectedIndex].value, keywordInput.value);
-    // console.log(window.localStorage.getItem("noGenres"));
-    // console.log(window.localStorage.getItem("yesGenres"));
-
-
-    // console.log(window.localStorage.getItem(selectInput.options[selectInput.selectedIndex].value));
-
-    api_request();
-
-    // Object.keys(localStorage).forEach(function (key) {
-    //     console.log(localStorage.getItem(key));
-    // });
-
-    // Object.keys(localStorage).forEach(function (key) {
-    //     console.log(localStorage.getItem(key));
-    //     for (const keyVal in key) {
-    //         console.log(keyVal);
-    //     }
-    // });
-
-    // var locSto = JSON.parse(localStorage.getItem("yesGenres"));
-    // console.log(locSto);
-    // // console.log(localStorage.getItem(key));
-    // for (var i = 0; i < locSto.length; i++) {
-    //     console.log(locSto[i]);
-
-    // }
 }
 
 function api_request() {
@@ -46,9 +15,15 @@ function api_request() {
         if (xhr.readyState === 4) {
             var locSto = JSON.parse(xhr.responseText);
             console.log(locSto.results);
+            var keywordIDS = [];
             for (var i = 0; i < locSto.results.length; i++) {
                 console.log(locSto.results[i].id);
+                if (i <= 6)
+                    keywordIDS.push(locSto.results[i].id);
+                // window.localStorage.setItem("keywords", locSto.results[i].id);
             }
+            window.localStorage.setItem("keywords", keywordIDS);
+
         } else {
             console.error(xhr.statusText);
         }

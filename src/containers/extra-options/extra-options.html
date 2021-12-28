@@ -17,7 +17,7 @@
               integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
               crossorigin="anonymous" />
         <link rel="stylesheet"
-              href="./css/options.css">
+              href="./css/extra-options.css">
     </head>
 
     <body>
@@ -63,47 +63,47 @@
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div id="date"
-                 class="container field is-max-desktop">
-                <div class="field is-horizontal">
-                    <div class="field-label is-large">
-                        <label class="label"><span
-                                  class="has-tooltip-multiline has-tooltip-arrow has-tooltip-info has-tooltip-bottom has-tooltip-text-left"
-                                  data-tooltip="Please give a date range in order to give you better options. ">Date:</span></label>
+        <div id="date"
+             class="container field is-max-desktop">
+            <div class="field is-horizontal">
+                <div class="field-label is-large">
+                    <label class="label"><span
+                              class="has-tooltip-multiline has-tooltip-arrow has-tooltip-info has-tooltip-bottom has-tooltip-text-left"
+                              data-tooltip="Please give a date range in order to give you better options. ">Date:</span></label>
+                </div>
+                <div class="field-body">
+                    <div class="field-label is-medium">
+                        <label class="label">From</label>
                     </div>
-                    <div class="field-body">
-                        <div class="field-label is-medium">
-                            <label class="label">From</label>
-                        </div>
-                        <div id="from-year"
-                             class="dropdown field">
-                            <div class="control has-icons-left">
-                                <div id="dropdown-from-menu"
-                                     class="select is-large">
-                                    <select class="dropdown-content">
-                                    </select>
-                                </div>
-                                <span class="icon is-large is-left">
-                                    <i class="far fa-calendar"></i>
-                                </span>
+                    <div id="from-year"
+                         class="dropdown field">
+                        <div class="control has-icons-left">
+                            <div id="dropdown-from-menu"
+                                 class="select is-large">
+                                <select class="dropdown-content">
+                                </select>
                             </div>
+                            <span class="icon is-large is-left">
+                                <i class="far fa-calendar"></i>
+                            </span>
                         </div>
-                        <div class="field-label is-medium">
-                            <label class="label">To</label>
-                        </div>
-                        <div id="to-year"
-                             class="dropdown field">
-                            <div class="control has-icons-left">
-                                <div id="dropdown-to-menu"
-                                     class="select is-large">
-                                    <select class="dropdown-content">
-                                    </select>
-                                </div>
-                                <span class="icon is-large is-left">
-                                    <i class="far fa-calendar"></i>
-                                </span>
+                    </div>
+                    <div class="field-label is-medium">
+                        <label class="label">To</label>
+                    </div>
+                    <div id="to-year"
+                         class="dropdown field">
+                        <div class="control has-icons-left">
+                            <div id="dropdown-to-menu"
+                                 class="select is-large">
+                                <select class="dropdown-content">
+                                </select>
                             </div>
+                            <span class="icon is-large is-left">
+                                <i class="far fa-calendar"></i>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -111,8 +111,10 @@
         </div>
 
         <div class="buttons container is-max-desktop level-item has-text-centered">
-            <button onclick="window.location.href='../genres/genres.html';" class="button is-success is-large">Back</button>
-            <button onclick="window.location.href='../search-result-page/search_result.html';" class="button is-success is-large">Search</button>
+            <button id="backBtn"
+                    class="button is-success is-large">Back</button>
+            <button id="searchBtn"
+                    class="button is-success is-large">Search</button>
         </div>
 
     </body>
@@ -122,8 +124,7 @@
             crossorigin="anonymous"></script>
     <script src="../navigation-bar/js/nav.js"></script>
     <script src="./js/languages.js"></script>
-    <script src="./js/options.js"></script>
-
-    <!-- <script src="https://www.jsdelivr.com/package/npm/@creativebulma/bulma-tooltip"></script> -->
+    <script src="./js/extra-options.js"></script>
+    <script src="./js/local-storage.js"></script>
 
 </html>

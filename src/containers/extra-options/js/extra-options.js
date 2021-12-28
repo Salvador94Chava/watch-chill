@@ -4,8 +4,8 @@ let fromYearMenu = document.querySelector('#dropdown-from-menu .dropdown-content
 let toYearMenu = document.querySelector('#dropdown-to-menu .dropdown-content');
 let languagesMenu = document.querySelector('#dropdown-lenguage-menu .dropdown-content');
 let dropdownItem = document.querySelector('.dropdown-item');
-let backButton = document.getElementById('back-btn');
-let searchButton = document.getElementById('search-btn');
+let backButton = document.getElementById('backBtn');
+let searchButton = document.getElementById('searchBtn');
 
 const earliestYear = 1940;
 
@@ -29,6 +29,11 @@ function setLanguages() {
     }
 }
 
+function goBack() {
+    window.location.href = '../genres/genres.html';
+}
+
 setYears(fromYearMenu);
 setYears(toYearMenu);
 setLanguages();
+backButton.addEventListener('click', goBack);

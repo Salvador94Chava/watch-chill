@@ -1,12 +1,32 @@
 html {
     overflow: hidden;
 }
+
 .column {
     height  : 100%;
     overflow: scroll;
 }
 
+.slider {
+    overflow: hidden;
+}
+
 .slider-pagination {
 
-  bottom: -30px  
+    bottom: -30px
 }
+
+.card {
+
+    opacity: 0.8;
+}
+
+.card:hover {
+
+    opacity: 1;
+    cursor : pointer;
+}
+
+/*.card-content {
+    height:90px
+}*/

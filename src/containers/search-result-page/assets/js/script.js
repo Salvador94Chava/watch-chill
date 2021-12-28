@@ -5,8 +5,6 @@ noGenresLocalStorage = [""];
 moviesArray = [""];
 genresArray = [""];
 
-
-
 var queryURL = "https://api.themoviedb.org/3/discover/movie?api_key=b574c405150412e74904c09bd2c259b6&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate";
 var genresQueryURL = "https://api.themoviedb.org/3/genre/movie/list?api_key=" + APIKey + "&language=en-US";
 
@@ -44,14 +42,20 @@ function getMoviesFromAPI() {
         .then(function (data) {
 
             readMoviesArray(data.results);
+
+        })
+
+        .then(function (data) {
+
+            addBulmaMain();
         })
 
 }
 function readMoviesArray(myArray) {
-    console.log(myArray);
     for (var index = 0; index < myArray.length; index++) {
         var movie = myArray[index];
         addMovie(movie);
+        console.log(genresQueryURL);
     }
 
 
@@ -85,9 +89,19 @@ function adaptText(text, maxLength) {
     return text;
 }
 
+function addBulmaMain() {
+    var blockEl = document.createElement("div");
+    var scriptBulma3El = document.createElement("script");
+    scriptBulma3El.setAttribute("src", "./assets/js/main.js");
+    scriptBulma3El.defer = true;
+
+    var bodyEl = document.getElementById("body");
+
+    bodyEl.append(scriptBulma3El);
+}
+
 function addMovie(myMovie) {
     var sliderEl = document.getElementById("slider1");
-    /*console.log(sliderEl);*/
     var cardEl = document.createElement("div");
     cardEl.setAttribute("class", "card " + myMovie.id);
     var card_imageEl = document.createElement("div");
@@ -124,26 +138,8 @@ function addMovie(myMovie) {
 
 
     sliderEl.append(cardEl);
-
-
 }
-
-function createEventManager() {
-
-    $(".card").click(function (event) {
-        event.preventDefault();
-
-        var classString = ($(this)[0].className);
-        if (classString) {
-            var movieID = classString.substring(($(this)[0].className).indexOf(' '), ($(this)[0].className).length);
-            console.log(movieID);
-        }
-    });
-}
-
-
 getMoviesFromAPI();
-$(document).ready(createEventManager);
 
 
 

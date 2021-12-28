@@ -29,6 +29,11 @@ function setLanguages() {
     }
 }
 
+function goBack() {
+    window.location.href = '../genres/genres.html';
+}
+
 setYears(fromYearMenu);
 setYears(toYearMenu);
 setLanguages();
+backButton.addEventListener('click', goBack);

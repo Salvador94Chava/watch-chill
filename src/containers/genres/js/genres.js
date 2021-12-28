@@ -2,6 +2,7 @@ var nextBtn = document.querySelector("input.button");
 var inputYes = document.querySelectorAll("input.yes");
 var inputNo = document.querySelectorAll("input.no");
 var label = document.querySelectorAll("label");
+var input = document.querySelectorAll("input");
 
 nextBtn.addEventListener("click", storeGenreOptions);
 
@@ -22,25 +23,31 @@ function uncheck(event) {
 function storeGenreOptions(event) {
     event.preventDefault();
 
-    var yesGenreArray = [];
-    var noGenreArray = [];
+    var checked = document.querySelectorAll("input:checked")
 
-    for (var i = 0; i < inputYes.length; i++) {
-        if (inputYes[i].checked === true) {
-            yesGenreArray.push(inputYes[i].dataset.index);
+    if (checked.length === 0) {
+        alert("Please select at least one genre")
+    } else {
+        var yesGenreArray = [];
+        var noGenreArray = [];
+
+        for (var i = 0; i < inputYes.length; i++) {
+            if (inputYes[i].checked === true) {
+                yesGenreArray.push(inputYes[i].dataset.index);
+            };
+         };
+
+        for (var i = 0; i < inputNo.length; i++) {
+            if (inputNo[i].checked === true) {
+                noGenreArray.push(inputNo[i].dataset.index);
+            };
         };
-    };
 
-    for (var i = 0; i < inputNo.length; i++) {
-        if (inputNo[i].checked === true) {
-            noGenreArray.push(inputNo[i].dataset.index);
-        };
-    };
+        localStorage.setItem("yesGenres", JSON.stringify(yesGenreArray));
+        localStorage.setItem("noGenres", JSON.stringify(noGenreArray));
 
-    localStorage.setItem("yesGenres", JSON.stringify(yesGenreArray));
-    localStorage.setItem("noGenres", JSON.stringify(noGenreArray));
-
-    goToNextPage();
+        goToNextPage();
+    }
 };
 
 function goToNextPage() {

@@ -1,9 +1,11 @@
 const APIKey = "612305371d20a404c362f2768ab01667";
 
-yesGenresLocalStorage = [""];
-noGenresLocalStorage = [""];
-moviesArray = [""];
-genresArray = [""];
+var yesGenresLocalStorage = [""];
+var noGenresLocalStorage = [""];
+var keywords = "";
+var language = "";
+var moviesArray = [""];
+var genresArray = [""];
 
 var queryURL = "https://api.themoviedb.org/3/discover/movie?api_key=b574c405150412e74904c09bd2c259b6&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate";
 var genresQueryURL = "https://api.themoviedb.org/3/genre/movie/list?api_key=" + APIKey + "&language=en-US";
@@ -11,11 +13,18 @@ var genresQueryURL = "https://api.themoviedb.org/3/genre/movie/list?api_key=" + 
 function readLocalStorage() {
     yesGenresLocalStorage = JSON.parse(localStorage.getItem("yesGenres"));
     noGenresLocalStorage = JSON.parse(localStorage.getItem("noGenres"));
+    keywords = localStorage.getItem("keywords");
+    language = localStorage.getItem("language");
+    console.log("yesGenres: " + yesGenresLocalStorage);
+    console.log("NoGenres: " + noGenresLocalStorage);
+    console.log("Keywords: " + keywords);
+    console.log("Language: " + language);
 
 }
 
 function getMoviesFromAPI() {
     /* Get the list of Genres*/
+    readLocalStorage();
     fetch(genresQueryURL)
         .then(function (response) {
             if (response.status === 200) {
@@ -55,7 +64,6 @@ function readMoviesArray(myArray) {
     for (var index = 0; index < myArray.length; index++) {
         var movie = myArray[index];
         addMovie(movie);
-        console.log(genresQueryURL);
     }
 
 

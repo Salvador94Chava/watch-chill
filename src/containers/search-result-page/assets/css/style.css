@@ -27,6 +27,17 @@ html {
     cursor : pointer;
 }
 
-/*.card-content {
-    height:90px
-}*/
+.button {
+
+    align-items: flex-start;
+    height     : 6.25em;
+}
+
+.button.is-primary {
+    margin-top      : 1em;
+    background-color: #dcecf7;
+}
+
+.is-flex {
+    justify-content: center;
+}

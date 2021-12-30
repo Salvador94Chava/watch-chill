@@ -6,7 +6,6 @@ ready(function () {
     bulmaCarousel.attach('#slider1', {
         slidesToScroll: 1,
         slidesToShow: 3,
-        /*      pagination: false,*/
         breakpoints: [{
             changePoint: 480, slidesToShow: 1, slidesToScroll: 1
         },

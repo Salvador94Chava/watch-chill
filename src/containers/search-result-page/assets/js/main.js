@@ -1,3 +1,10 @@
+var modalEl = document.querySelector('.modal');
+var modalBackground = document.querySelector('.modal-background');
+var modalCloseBtn = document.querySelector('.modal-close');
+var movieTitleEl = document.querySelector('.modal-card-title');
+
+var movieURL = 'https://api.themoviedb.org/3/movie/';
+
 ready(function () {
     bulmaCarousel.attach('#slider', {
         slidesToScroll: 1,
@@ -31,15 +38,27 @@ ready(function () {
 });
 
 function createEventManager() {
-
     $(".card").click(function (event) {
         event.preventDefault();
+        modalEl.classList.add('is-active');
         var classString = ($(this)[0].className);
         if (classString) {
             var movieID = classString.substring(($(this)[0].className).indexOf(' '), ($(this)[0].className).length);
             console.log(movieID);
+            // var movieResponse = await fetch(`${movieURL}${movieID}?api_key=${APIKey}`);
+            // movieResponse = await movieResponse.json();
+
+
+            //get poster -> https://www.themoviedb.org/t/p/w1280/HEREAPIINFO
+
         }
     });
 }
-$(document).ready(createEventManager);
 
+function closeModal() {
+    modalEl.classList.remove('is-active');
+}
+
+$(document).ready(createEventManager);
+modalCloseBtn.addEventListener('click', closeModal);
+modalBackground.addEventListener('click', closeModal);

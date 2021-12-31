@@ -1,4 +1,4 @@
-let navBarEl = $('nav');
+let navBarEl = $('nav.nav-bar');
 let logoPath = location.pathname.includes('containers') ? '../../../assets/images/watch_chill_logo.png'
   : './assets/images/watch_chill_logo.png';
 

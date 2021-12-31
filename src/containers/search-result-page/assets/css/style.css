@@ -3,7 +3,7 @@ html {
 }
 
 .column {
-    height  : 100%;
+    height: 100%;
     overflow: scroll;
 }
 
@@ -24,7 +24,12 @@ html {
 .card:hover {
 
     opacity: 1;
-    cursor : pointer;
+    cursor: pointer;
+}
+
+.modal img {
+    max-width: 20rem;
+    height: auto;
 }
 
 /*.card-content {

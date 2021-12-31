@@ -182,9 +182,14 @@ function addMovie(myMovie) {
     var imgEl = document.createElement("img");
     if (!myMovie)
         var imgLink = "https://media.istockphoto.com/vectors/no-result-not-found-or-404-web-page-error-illustration-vector-id846795366";
-    else
-        var imgLink = "https://image.tmdb.org/t/p/w500" + myMovie.backdrop_path;
-    imgEl.setAttribute("src", imgLink);
+    else {
+        if (myMovie.backdrop_path == null)
+            var imgLink = "../../../assets/images/watch_chill_logo.png";
+        else {
+            var imgLink = "https://image.tmdb.org/t/p/w500" + myMovie.backdrop_path;
+        }
+        imgEl.setAttribute("src", imgLink);
+    }
     if (!myMovie)
         imgEl.setAttribute("alt", "no results");
     else

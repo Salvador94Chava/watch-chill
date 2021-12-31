@@ -1,5 +1,9 @@
 const languages = [
     {
+        "English": "English",
+        "alpha2": "en"
+    },
+    {
         "English": "Afar",
         "alpha2": "aa"
     },

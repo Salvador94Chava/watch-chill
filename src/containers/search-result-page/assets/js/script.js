@@ -62,14 +62,14 @@ function buildQueryURL() {
     }
     if (fromYearLocalStorage !== "") {
         fromYear.set({ 'year': fromYearLocalStorage, 'month': 0, "date": 1 });
-        queryURL = queryURL + "&release_date.gte=" + fromYear.format("YYYY-MM-DD");
+        queryURL = queryURL + "&primary_release_date.gte=" + fromYear.format("YYYY-MM-DD");
     }
     if (toYearLocalStorage !== "") {
         if (toYearLocalStorage == moment().format("YYYY"))
             toYear = moment();
         else
             toYear.set({ 'year': toYearLocalStorage, 'month': 11, "date": 31 });
-        queryURL = queryURL + "&release_date.lte=" + toYear.format("YYYY-MM-DD");
+        queryURL = queryURL + "&primary_release_date.lte=" + toYear.format("YYYY-MM-DD");
     }
 }
 

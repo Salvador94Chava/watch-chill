@@ -5,7 +5,6 @@ var yesGenresLocalStorage = [""];
 var noGenresLocalStorage = [""];
 var fromYearLocalStorage = "";
 var toYearLocalStorage = "";
-var keywords = "";
 var language = "en-US";
 var moviesArray = [""];
 var genresArray = [""];
@@ -19,7 +18,6 @@ var genresQueryURL = "https://api.themoviedb.org/3/genre/movie/list?api_key=" + 
 function readLocalStorage() {
     yesGenresLocalStorage = JSON.parse(localStorage.getItem("yesGenres"));
     noGenresLocalStorage = JSON.parse(localStorage.getItem("noGenres"));
-    keywords = localStorage.getItem("keywords");
     language = localStorage.getItem("language");
     fromYearLocalStorage = localStorage.getItem("fromYear");
     toYearLocalStorage = localStorage.getItem("toYear");
@@ -55,10 +53,6 @@ function buildQueryURL() {
         var noGenres = arrayToString(noGenresLocalStorage);
         noGenres = "&without_genres=" + noGenres;
         queryURL = queryURL + noGenres;
-    }
-    if (keywords !== "undefined") {
-        keywords = "&with_keywords=" + keywords.replace(/,/g, "%2C");
-        queryURL = queryURL + keywords;
     }
     if (fromYearLocalStorage !== "") {
         fromYear.set({ 'year': fromYearLocalStorage, 'month': 0, "date": 1 });

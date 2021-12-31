@@ -203,13 +203,13 @@ function addMovie(myMovie) {
         card_contentEl.setAttribute("class", "card-content");
         var item_titleEl = document.createElement("div");
         item_titleEl.setAttribute("class", "item__title");
-        item_titleEl.textContent = adaptText(myMovie.title, 41);
+        item_titleEl.innerHTML = "<b>Title: </b>" + adaptText(myMovie.title, 41);
         var item_descriptionEl = document.createElement("div");
         item_descriptionEl.setAttribute("class", "item__description");
-        item_descriptionEl.textContent = adaptText(myMovie.overview, 82);
+        item_descriptionEl.innerHTML = "<b>Overview: </b>" + adaptText(myMovie.overview, 82);
         var item_genresEl = document.createElement("div");
         item_genresEl.setAttribute("class", "item__description");
-        item_genresEl.textContent = "Genre: " + translateGenres(myMovie.genre_ids);
+        item_genresEl.innerHTML = "<b>Genre: </b>" + translateGenres(myMovie.genre_ids);
 
         card_contentEl.append(item_titleEl);
         card_contentEl.append(item_descriptionEl);

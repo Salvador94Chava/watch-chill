@@ -3,13 +3,13 @@ const APIKey = "612305371d20a404c362f2768ab01667";
 
 var yesGenresLocalStorage = [""];
 var noGenresLocalStorage = [""];
-var keywords = "";
+var fromYearLocalStorage = "";
+var toYearLocalStorage = "";
 var language = "en-US";
 var moviesArray = [""];
 var genresArray = [""];
-var today = moment();
-var toYear = moment(today).format("YYYY");
-var fromYear = toYear;
+var toYear = moment();
+var fromYear = moment();
 
 
 var queryURL = "";
@@ -18,8 +18,9 @@ var genresQueryURL = "https://api.themoviedb.org/3/genre/movie/list?api_key=" + 
 function readLocalStorage() {
     yesGenresLocalStorage = JSON.parse(localStorage.getItem("yesGenres"));
     noGenresLocalStorage = JSON.parse(localStorage.getItem("noGenres"));
-    keywords = localStorage.getItem("keywords");
     language = localStorage.getItem("language");
+    fromYearLocalStorage = localStorage.getItem("fromYear");
+    toYearLocalStorage = localStorage.getItem("toYear");
 }
 
 function arrayToString(myArray) {
@@ -37,30 +38,39 @@ function arrayToString(myArray) {
 function buildQueryURL() {
     queryURL = "https://api.themoviedb.org/3/discover/movie?api_key=" + APIKey;
 
-    language = "&language=" + language;
+    language = "&with_original_language=" + language;
     queryURL = queryURL + language;
 
     var sort = "&sort_by=popularity.desc&include_adult=false&include_video=false&page=1";
     queryURL = queryURL + sort;
 
-    if (yesGenresLocalStorage) {
+    if (yesGenresLocalStorage.length !== 0) {
         var yesGenres = arrayToString(yesGenresLocalStorage);
         yesGenres = "&with_genres=" + yesGenres;
         queryURL = queryURL + yesGenres;
     }
-    if (noGenresLocalStorage) {
+    if (noGenresLocalStorage.length !== 0) {
         var noGenres = arrayToString(noGenresLocalStorage);
         noGenres = "&without_genres=" + noGenres;
         queryURL = queryURL + noGenres;
     }
-    if (keywords) { }
-    keywords = "&with_keywords=" + keywords.replace(/,/g, "%2C");
-    queryURL = queryURL + keywords;
+    if (fromYearLocalStorage !== "") {
+        fromYear.set({ 'year': fromYearLocalStorage, 'month': 0, "date": 1 });
+        queryURL = queryURL + "&primary_release_date.gte=" + fromYear.format("YYYY-MM-DD");
+    }
+    if (toYearLocalStorage !== "") {
+        if (toYearLocalStorage == moment().format("YYYY"))
+            toYear = moment();
+        else
+            toYear.set({ 'year': toYearLocalStorage, 'month': 11, "date": 31 });
+        queryURL = queryURL + "&primary_release_date.lte=" + toYear.format("YYYY-MM-DD");
+    }
 }
 
 function getMoviesFromAPI() {
     readLocalStorage();
     buildQueryURL();
+    console.log(queryURL);
     fetch(genresQueryURL)
         /* Get the list of Genres*/
         .then(function (response) {
@@ -88,7 +98,6 @@ function getMoviesFromAPI() {
         .then(function (data) {
 
             readMoviesArray(data.results);
-            console.log(queryURL)
 
         })
 
@@ -173,9 +182,14 @@ function addMovie(myMovie) {
     var imgEl = document.createElement("img");
     if (!myMovie)
         var imgLink = "https://media.istockphoto.com/vectors/no-result-not-found-or-404-web-page-error-illustration-vector-id846795366";
-    else
-        var imgLink = "https://image.tmdb.org/t/p/w500" + myMovie.backdrop_path;
-    imgEl.setAttribute("src", imgLink);
+    else {
+        if (myMovie.backdrop_path == null)
+            var imgLink = "../../../assets/images/watch_chill_logo.png";
+        else {
+            var imgLink = "https://image.tmdb.org/t/p/w500" + myMovie.backdrop_path;
+        }
+        imgEl.setAttribute("src", imgLink);
+    }
     if (!myMovie)
         imgEl.setAttribute("alt", "no results");
     else
@@ -188,13 +202,13 @@ function addMovie(myMovie) {
         card_contentEl.setAttribute("class", "card-content");
         var item_titleEl = document.createElement("div");
         item_titleEl.setAttribute("class", "item__title");
-        item_titleEl.textContent = adaptText(myMovie.title, 41);
+        item_titleEl.innerHTML = "<b>Title: </b>" + adaptText(myMovie.title, 41);
         var item_descriptionEl = document.createElement("div");
         item_descriptionEl.setAttribute("class", "item__description");
-        item_descriptionEl.textContent = adaptText(myMovie.overview, 82);
+        item_descriptionEl.innerHTML = "<b>Overview: </b>" + adaptText(myMovie.overview, 82);
         var item_genresEl = document.createElement("div");
         item_genresEl.setAttribute("class", "item__description");
-        item_genresEl.textContent = "Genre: " + translateGenres(myMovie.genre_ids);
+        item_genresEl.innerHTML = "<b>Genre: </b>" + translateGenres(myMovie.genre_ids);
 
         card_contentEl.append(item_titleEl);
         card_contentEl.append(item_descriptionEl);

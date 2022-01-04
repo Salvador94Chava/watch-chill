@@ -1,56 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+    <meta name="description"
+          content="">
 
-  <title>Watch & Chill</title>
+    <title>Watch & Chill</title>
 
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" rel="stylesheet">
-  <link href="https://bulma-carousel.onrender.com/assets/css/highlight.css" rel="stylesheet">
-  <link href="https://bulma-carousel.onrender.com/assets/css/documentation.min.css" rel="stylesheet">
-  <link href="https://bulma-carousel.onrender.com/assets/css/bulma-carousel.min.css" rel="stylesheet">
-  <link href="./assets/css/style.css" rel="stylesheet">
-  <!--  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"
+          rel="stylesheet">
+    <link href="https://bulma-carousel.onrender.com/assets/css/highlight.css"
+          rel="stylesheet">
+    <link href="https://bulma-carousel.onrender.com/assets/css/documentation.min.css"
+          rel="stylesheet">
+    <link href="https://bulma-carousel.onrender.com/assets/css/bulma-carousel.min.css"
+          rel="stylesheet">
+    <link href="./assets/css/style.css"
+          rel="stylesheet">
+    <!--  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
     integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 -->
-  <!-- Load Font Awesome 5 -->
-  <!--  <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js"></script> -->
+    <!-- Load Font Awesome 5 -->
+    <!--  <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js"></script> -->
 
-  <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
-</head>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+  </head>
 
-<body id="body">
-  <nav>
+  <body id="body">
+    <nav class="nav-bar"></nav>
+    <div class="column">
+      <section class="section">
+        <div id="slider1"
+             class="best">
+        </div>
+        <div class="is-flex is-justify-content-center">
+          <a href="../genres/genres.html"
+             class="button is-primary">
 
-  </nav>
-  <div class="column">
-    <section class="section">
-      <div id="slider1" class="best">
-      </div>
-<div class= "is-flex is-justify-content-center">
-      <a href="../genres/genres.html" class="button is-primary">
+            <figure class="image is-128x128 is-covered">
+              <img src="./assets/images/searchAgainIcon.png"
+                   alt="searchAgainIcon">
+            </figure>
 
-          <figure class="image is-128x128 is-covered">
-            <img src="./assets/images/searchAgainIcon.png" alt="searchAgainIcon">
-          </figure>
-
-      </a>
+          </a>
+        </div>
+      </section>
     </div>
-    </section>
-  </div>
-  <!--  SCRIPTS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-    crossorigin="anonymous"></script>
-  <script src="../navigation-bar/js/nav.js"></script>
-  <script src="./assets/js/doc.js"></script>
-  <script src="./assets/js/bulma-carousel.min.js"></script>
-  <script src="./assets/js/script.js"></script>
 
-</body>
+    <div class="modal">
+      <div class="modal-background">
+      </div>
+      <div class="modal-content">
+        <div class="box">
+          <article class="media is-horizontal">
+            <div class="media-left">
+              <figure class="image">
+                <img>
+              </figure>
+            </div>
+            <div class="media-content">
+              <div class="content">
+                <p>
+                <h2 class="movie-title"></h2>
+                <small class="release-date"></small>
+                <small class="genres"></small>
+                <br>
+                <small class="runtime"></small>
+                <br>
+                <strong>Overview</strong>
+                <br>
+                <p class="overview"></p>
+                <strong>Popularity</strong>
+                <br>
+                <p class="popularity"></p>
+                <a class="movie-homepage"></a>
+                </p>
+              </div>
+              <nav class="level is-mobile">
+                <div class="level-left">
+                  <a class="level-item">
+                    <span class="icon is-small">
+                      <i class="fas fa-reply"></i>
+                    </span>
+                  </a>
+                  <a class="level-item">
+                    <span class="icon is-small">
+                      <i class="fas fa-retweet"></i>
+                    </span>
+                  </a>
+                  <a class="level-item">
+                    <span class="icon is-small">
+                      <i class="fas fa-heart"></i>
+                    </span>
+                  </a>
+                </div>
+              </nav>
+            </div>
+          </article>
+        </div>
+      </div>
+      <button class="modal-close is-large"
+              aria-label="close"></button>
+    </div>
+
+    <!--  SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js'>
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous"></script>
+    <script src="../navigation-bar/js/nav.js"></script>
+    <script src="./assets/js/doc.js"></script>
+    <script src="./assets/js/bulma-carousel.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+
+  </body>
 
 </html>

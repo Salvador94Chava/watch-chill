@@ -3,6 +3,7 @@ var inputYes = document.querySelectorAll("input.yes");
 var inputNo = document.querySelectorAll("input.no");
 var label = document.querySelectorAll("label");
 var input = document.querySelectorAll("input");
+var genresChecked = 0;
 
 nextBtn.addEventListener("click", storeGenreOptions);
 
@@ -16,7 +17,28 @@ function uncheck(event) {
             inputNo[i].checked = false;
         } else if (event.target.className === "no" && event.target.dataset.index === inputYes[i].dataset.index && inputYes[i].checked === true) {
             inputYes[i].checked = false;
+            genresChecked = genresChecked - 1;
+        } else if (genresChecked < 3) {
+            inputYes[i].removeAttribute("disabled");
         }
+    }
+}
+
+for (var i = 0; i < inputYes.length; i++) {
+    inputYes[i].addEventListener("click", disable);
+}
+
+function disable(event) {
+    if (event.target.checked) {
+        genresChecked = genresChecked + 1;
+    } else if (!event.target.checked) {
+        genresChecked = genresChecked - 1;
+    } 
+
+    for (var i = 0; i < inputYes.length; i++) {
+        if (genresChecked === 3 && !inputYes[i].checked) {
+            inputYes[i].setAttribute("disabled", "");
+        } 
     }
 }
 

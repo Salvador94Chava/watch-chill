@@ -61,7 +61,7 @@ async function populateModal(movieId) {
     var minutes = response.runtime % 60;
     movieRuntimeEl.textContent = `${hours} hr ${minutes} min`;
     movieOverviewEl.textContent = response.overview;
-    var percentage = (response.vote_average * 100) / 10;
+    var percentage = Math.floor((response.vote_average * 100) / 10);
     moviePopularityEl.textContent = `${percentage} %`
     moviePosterEl.src = `https://www.themoviedb.org/t/p/w1280${response.poster_path}`
     moviePageEl.textContent = response.homepage;

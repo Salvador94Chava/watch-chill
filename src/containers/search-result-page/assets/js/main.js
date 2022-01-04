@@ -11,7 +11,6 @@ var moviePopularityEl = document.querySelector('.popularity');
 var moviePageEl = document.querySelector('.movie-homepage');
 var movieURL = 'https://api.themoviedb.org/3/movie/';
 var url, response, movieGenres, runtime;
-var genresArray = [];
 
 ready(function () {
     bulmaCarousel.attach('#slider', {
@@ -46,6 +45,7 @@ ready(function () {
 });
 
 async function populateModal(movieId) {
+    var genresArray = [];
     url = `${movieURL}${movieId}?api_key=${APIKey}`
     response = await fetch(url);
     response = await response.json();

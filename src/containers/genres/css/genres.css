@@ -7,6 +7,15 @@ span {
     color: #48c78e;
 }
 
-form {
-    margin: 0 35px 0 35px;
+form, .extra-options {
+    margin: 0 35px 40px 35px;
+}
+
+.dropdown-content {
+    max-height: 13em;
+    overflow: auto;
+}
+
+.columns.extra-options {
+    display: none;
 }

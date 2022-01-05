@@ -30,10 +30,11 @@ function setLanguages() {
 }
 
 function goBack() {
-    window.location.href = '../genres/genres.html';
+    window.location.href = '../../../index.html';
 }
 
 setYears(fromYearMenu);
 setYears(toYearMenu);
+fromYearMenu.querySelectorAll('.dropdown-item')[1].setAttribute('selected','');
 setLanguages();
 backButton.addEventListener('click', goBack);

@@ -1,0 +1,12 @@
+h2, h3 {
+    position: relative;
+    text-align: center;
+}
+
+span {
+    color: #48c78e;
+}
+
+form {
+    margin: 0 35px 0 35px;
+}

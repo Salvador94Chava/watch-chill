@@ -110,22 +110,24 @@ function getMoviesFromAPI() {
 
 function displayNoResultSlides() {
 
-
-
 };
 
 function readMoviesArray(myArray) {
-    if (myArray.length == 0) {
-
-        for (var index = 0; index < 6; index++) {
-            addMovie(null);
-        }
-    } else {
+    if (myArray.length > 0) {
         for (var index = 0; index < myArray.length; index++) {
             var movie = myArray[index];
             addMovie(movie);
         }
+
     }
+    if (myArray.length < 4) {
+        var nullSlides = 4 - myArray.length
+
+        for (var index = 0; index < nullSlides; index++) {
+            addMovie(null);
+        }
+    }
+
 }
 
 function translateGenres(myGenres) {
@@ -178,18 +180,18 @@ function addMovie(myMovie) {
     card_imageEl.setAttribute("class", "card-image");
 
     var figureEl = document.createElement("figure");
-    figureEl.setAttribute("class", "image is-5by3 is-covered");
+    figureEl.setAttribute("class", "image is-5by3 is-contain");
     var imgEl = document.createElement("img");
-    if (!myMovie)
+    if (myMovie === null) {
         var imgLink = "https://media.istockphoto.com/vectors/no-result-not-found-or-404-web-page-error-illustration-vector-id846795366";
-    else {
+    } else {
         if (myMovie.backdrop_path == null)
             var imgLink = "../../../assets/images/watch_chill_logo.png";
         else {
             var imgLink = "https://image.tmdb.org/t/p/w500" + myMovie.backdrop_path;
         }
-        imgEl.setAttribute("src", imgLink);
-    }
+        
+    }imgEl.setAttribute("src", imgLink);
     if (!myMovie)
         imgEl.setAttribute("alt", "no results");
     else

@@ -26,7 +26,7 @@ ready(function () {
         {
             changePoint: 640, slidesToShow: 2, slidesToScroll: 2
         }, {
-            changePoint: 768, slidesToShow: 3, slidesToScroll: 3
+            changePoint: 768, slidesToShow: 3, slidesToScroll: 1
         }],
         infinite: true,
     });

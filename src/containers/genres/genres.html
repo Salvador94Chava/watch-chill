@@ -14,6 +14,8 @@
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
           crossorigin="anonymous" />
     <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@creativebulma/bulma-tooltip@1.2.0/dist/bulma-tooltip.min.css">
+    <link rel="stylesheet"
           href="./css/genres.css">
 
     <title>Watch and Chill</title>
@@ -180,21 +182,95 @@
           </div>
 
         </div>
-
-        <div class="has-text-centered">
-          <input type="submit"
-                 name="submit"
-                 value="Next"
-                 class="button is-success is-large">
-        </div>
       </form>
+
+      <label class="container is-fluid checkbox has-text-weight-bold extra-options">
+        <input type="checkbox">
+        Include more filters
+      </label>
+
+      <div class="container columns is-align-items-center extra-options">
+        <div id="language"
+             class="column is-one-third">
+          <div class="columns is-align-items-center">
+            <div class="column is-narrow">
+              <label class="label">Original language:</label>
+            </div>
+            <div id="lenguage"
+                 class="column is-half dropdown field-body">
+              <div class="control has-icons-left">
+                <div id="dropdown-lenguage-menu"
+                     class="select">
+                  <select class="dropdown-content">
+                  </select>
+                </div>
+                <span class="icon is-large is-left">
+                  <i class="fas fa-language"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="date"
+             class="column ">
+          <div class="columns is-align-items-center">
+            <div class="column is-narrow">
+              <label class="label"><span
+                      class="has-tooltip-multiline has-tooltip-arrow has-tooltip-info has-tooltip-bottom has-tooltip-text-left"
+                      data-tooltip="Please give a date range in order to give you better options. ">Date
+                  Range:</span></label>
+            </div>
+            <div class="columns is-align-items-center">
+              <div id="from-year"
+                   class="column dropdown field-body">
+                <div class="control has-icons-left">
+                  <div id="dropdown-from-menu"
+                       class="select">
+                    <select class="dropdown-content">
+                    </select>
+                  </div>
+                  <span class="icon is-large is-left">
+                    <i class="far fa-calendar"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="column">
+                <label class="label">To</label>
+              </div>
+              <div id="to-year"
+                   class="column dropdown field-body">
+                <div class="control has-icons-left">
+                  <div id="dropdown-to-menu"
+                       class="select">
+                    <select class="dropdown-content">
+                    </select>
+                  </div>
+                  <span class="icon is-large is-left">
+                    <i class="far fa-calendar"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="buttons container is-max-desktop level-item has-text-centered">
+        <button id="backBtn"
+                class="button is-success is-large">Back</button>
+        <button id="searchBtn"
+                class="button is-success is-large">Search</button>
+      </div>
 
     </main>
     <script src="https://code.jquery.com/jquery-3.6.0.js"
             integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
             crossorigin="anonymous"></script>
     <script src="../navigation-bar/js/nav.js"></script>
+    <script src="../extra-options/js/languages.js"></script>
+    <script src="../extra-options/js/extra-options.js"></script>
     <script src="js/genres.js"></script>
+    <script src="../extra-options/js/local-storage.js"></script>
 
   </body>
 

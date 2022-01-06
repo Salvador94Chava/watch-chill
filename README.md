@@ -36,7 +36,7 @@ in the following. we will leave links to help reader find what is the most impor
 ---
 ## Installation
 
-to run this project successfuly one needs to go to Github specifically to this link. https://github.com/rargotte/Watch-Chill- click on the link and you will be taken to Watch&Chill Github page, where the user will be available to see the code. 
+to run this project successfuly one needs to go to Github specifically to this link. https://github.com/rargotte/watch-chill click on the link and you will be taken to Watch&Chill Github page, where the user will be available to see the code. 
 
 Here is a picture of the github account. 
 
@@ -64,7 +64,7 @@ This are the programms and third-party assets that we used through out the proye
 ## Contribute
 we recommend the users to let us know if they find any bugs to please create a ticket in our Github account.
 
-[Create a ticket](https://github.com/rargotte/Watch-Chill-/issues)
+[Create a ticket](https://github.com/rargotte/watch-chill/issues)
 
 ---
 ## What is next?
@@ -111,11 +111,11 @@ This are the team members, for the proyect Watch&Chill:
 ---
 ## Links
 
-Deployed Proyect: https://rargotte.github.io/Watch-Chill-/
+Deployed Proyect: https://rargotte.github.io/watch-chill/
 
 
 
-GitHub repo: https://github.com/rargotte/Watch-Chill-
+GitHub repo: https://github.com/rargotte/watch-chill
 
 
 # License

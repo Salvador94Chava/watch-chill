@@ -1,20 +1,19 @@
-# Watch-Chill-
+# Watch&Chill Web Application
 
-# Description
-
-
-
+## Description
 This project was requested by our customer, the customer stated that they needed an app that was able to:
 
 Recommend movies to the user according to the genres and years that the user wishes to see.
 
-# Our motivation, 
+---
+## Our motivation
 
 When we feel like watching a movie, we nowadays have an incredible number of options easily available to us, to the point it becomes overwhelming. like everything in life, the more options we have, the most difficult is to choose from. 
 
 As developers, this motivated us to write the following user story:
 
-# Table of Contents.
+---
+## Table of Contents
 
 in the following. we will leave links to help reader find what is the most important for them to read. instead of taking more time from the reader.
 
@@ -34,75 +33,69 @@ in the following. we will leave links to help reader find what is the most impor
 
 -[License](#License)
 
-# Installation
+---
+## Installation
 
 to run this project successfuly one needs to go to Github specifically to this link. https://github.com/rargotte/Watch-Chill- click on the link and you will be taken to Watch&Chill Github page, where the user will be available to see the code. 
 
+Here is a picture of the github account. 
 
+![Watch and Chill repository Image](./assets/images/w&c_repo.png)
 
-here is a picture of the github account. 
+Here is a picture of the Proyect on Github pages.
 
-![Screenshot Github]
+![Watch and Chill web page Image](./assets/images/w&c_web_page.png)
 
-
-
-here is a picture of the Proyect on Github pages.
-
-![Screenshot Proyect on Github pages.]
-
-
-# Process
-
-this are the programms and third-party assets that we used through out the proyect.
+---
+## Process
+This are the programms and third-party assets that we used through out the proyect.
 
 - Bulma
 - HTML
 - JavaScript
 - JQuery
 - FontAwesome
--------------------
-## API
+
+### API
 - TheMovieDB
 - FacebookDevelopers
 
-# How_To_Contribute
-
-we recommend the users to let us know if they find any bugs and to please contact us through email to emailto:Bugs@Watch&Chill 
+---
+## Contribute
+we recommend the users to let us know if they find any bugs and to please contact us through email to bugs@wac.com 
 
 [Mail_for_Watch&Chill](Bugs@Watch&Chill)
 
-
-# What_is_next
-
+---
+## What is next?
 What the Staff for Watch&Chill plan for the platform are
-
 - Share movies results in FB.
 - Share selected movie on Twitter.
 - Include more extra option on the platform.
 - Build a mobile application.
 
+---
+## Task&Roles
 
-# Task&Roles
-
-## Home Page
+### Home Page
 - Salvador Espinosa
 
-## Genres Page
+### Genres Page
 - Abimael Monárrez
 
-## Extra Options Page
+### Extra Options Page
 - Guillermo Lazo
 - Salvador Espinosa
 
-## Search Results Page
+### Search Results Page
 - Regulo Argotte
 
-## Movie Modal
+### Movie Modal
 - Adrián Fernández
 - Guillermo Lazo
 
-# Credits
-
+---
+## Credits
 This are the team members, for the proyect Watch&Chill
 
 - Guillermo Lazo
@@ -115,7 +108,8 @@ This are the team members, for the proyect Watch&Chill
 
 - Salvador Espinosa
 
-# Links
+---
+## Links
 
 Deployed Proyect: https://rargotte.github.io/Watch-Chill-/
 

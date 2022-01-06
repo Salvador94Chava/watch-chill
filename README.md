@@ -62,9 +62,9 @@ This are the programms and third-party assets that we used through out the proye
 
 ---
 ## Contribute
-we recommend the users to let us know if they find any bugs and to please contact us through email to bugs@wac.com 
+we recommend the users to let us know if they find any bugs to please create a ticket in our Github account.
 
-[Mail_for_Watch&Chill](Bugs@Watch&Chill)
+[Create a ticket](https://github.com/rargotte/Watch-Chill-/issues)
 
 ---
 ## What is next?
@@ -96,7 +96,7 @@ What the Staff for Watch&Chill plan for the platform are
 
 ---
 ## Credits
-This are the team members, for the proyect Watch&Chill
+This are the team members, for the proyect Watch&Chill:
 
 - Guillermo Lazo
 
@@ -120,5 +120,5 @@ GitHub repo: https://github.com/rargotte/Watch-Chill-
 
 # License
 
-This file is only operated by personal thaat were contacted by the employer. We clarify that the employer is the only person that owns the right for the proyect Watch&Chill
+This file is only operated by personal that were contacted by the employer. We clarify that the employer is the only person that owns the right for the proyect Watch&Chill.
 

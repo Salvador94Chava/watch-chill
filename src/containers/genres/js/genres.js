@@ -74,7 +74,7 @@ function storeGenreOptions(event) {
 
         if (!extraOptionsCheckbox.checked) {
             localStorage.setItem('language', 'en');
-            localStorage.setItem('fromYear', new Date().getFullYear() - 1);
+            localStorage.setItem('fromYear', new Date().getFullYear() - 10);
             localStorage.setItem('toYear', new Date().getFullYear());
         } else {
             localStorage.setItem('language', alpha);

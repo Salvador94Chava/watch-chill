@@ -24,6 +24,7 @@ function readLocalStorage() {
 }
 
 function arrayToString(myArray) {
+    /*This function converts array format from local storage to string*/
     var myString = "";
     for (var index = 0; index < myArray.length; index++) {
         var element = myArray[index];
@@ -108,20 +109,21 @@ function getMoviesFromAPI() {
 
 }
 
-function displayNoResultSlides() {
-
-};
-
 function readMoviesArray(myArray) {
-    if (myArray.length > 0) {
-        for (var index = 0; index < myArray.length; index++) {
+    /*This function reads movies from an array and sends 
+    to another function to create the slide*/
+    var myArrayLength = myArray.length;
+    var limitOfSlides = 6;
+    if (myArrayLength > limitOfSlides) {
+        myArrayLength = limitOfSlides;
+    } if (myArray.length > 0) {
+        for (var index = 0; index < myArrayLength; index++) {
             var movie = myArray[index];
             addMovie(movie);
         }
-
     }
-    if (myArray.length < 4) {
-        var nullSlides = 4 - myArray.length
+    if (myArrayLength < 4) {
+        var nullSlides = 4 - myArrayLength;
 
         for (var index = 0; index < nullSlides; index++) {
             addMovie(null);
@@ -131,6 +133,7 @@ function readMoviesArray(myArray) {
 }
 
 function translateGenres(myGenres) {
+    /*This function translate genres ID into their description*/
     var stringGenres = "";
     if (myGenres)
 
@@ -151,6 +154,7 @@ function translateGenres(myGenres) {
 }
 
 function adaptText(text, maxLength) {
+    /*This function truncates the length of the text to fit the card*/
     var textString = text;
     if (text.length > maxLength) {
         text = text.substring(0, (maxLength - 3)) + "...";
@@ -159,6 +163,7 @@ function adaptText(text, maxLength) {
 }
 
 function addBulmaMain() {
+    /*This function adds bulma script at the end of the HTML page*/
     var blockEl = document.createElement("div");
     var scriptBulma3El = document.createElement("script");
     scriptBulma3El.setAttribute("src", "./assets/js/main.js");
@@ -170,6 +175,7 @@ function addBulmaMain() {
 }
 
 function addMovie(myMovie) {
+    /*This function creates a card with the movie details*/
     var sliderEl = document.getElementById("slider1");
     var cardEl = document.createElement("div");
     if (!myMovie)
@@ -190,8 +196,8 @@ function addMovie(myMovie) {
         else {
             var imgLink = "https://image.tmdb.org/t/p/w500" + myMovie.backdrop_path;
         }
-        
-    }imgEl.setAttribute("src", imgLink);
+
+    } imgEl.setAttribute("src", imgLink);
     if (!myMovie)
         imgEl.setAttribute("alt", "no results");
     else

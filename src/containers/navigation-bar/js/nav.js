@@ -4,7 +4,7 @@ let logoPath = location.pathname.includes('containers') ? '../../../assets/image
 let homePath = location.pathname.includes('containers') ? '../../../index.html'
   : './index.html';
 
-navBarEl.classList.add("navbar", "level");
+navBarEl.classList.add("container","navbar", "level");
 navBarEl.setAttribute("role", "navigation");
 navBarEl.setAttribute("aria-label", "main navigation");
 navBarEl.innerHTML = `

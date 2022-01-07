@@ -19,3 +19,13 @@ form, .extra-options {
 .columns.extra-options {
     display: none;
 }
+
+@media screen and (max-width: 767px) {
+    .columns.extra-options {
+        flex-direction: column;
+    }
+
+    .is-align-items-center {
+        align-items: unset!important;
+    }
+}
